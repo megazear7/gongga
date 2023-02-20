@@ -10,5 +10,7 @@ export default context => html`
     <a href="https://www.flaticon.com/free-icons/ping-pong" title="ping pong icons">Ping pong icons created by Freepik - Flaticon</a>
     - <a href="https://orison.alexlockhart.me/">Made with Orison</a>
     - <a href="https://github.com/megazear7/gongga">GitHub</a>
+    - <a href="https://www.npmjs.com/package/gongga">NPM</a>
+    - <a href="https://www.alexlockhart.me/">Alex Lockhart</a>
   </div>
 `;
