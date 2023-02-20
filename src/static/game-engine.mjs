@@ -4,7 +4,7 @@ import Player from './player.mjs';
 
 export default class GameEngine {
     width = 12;
-    height = 9;
+    height = 18;
     speed = 100;
 
     constructor({ screen }) {

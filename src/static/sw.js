@@ -1,4 +1,4 @@
-var appCacheName = 'app-cache-v1';
+var appCacheName = 'app-cache-v2';
 var cacheNames = [appCacheName];
 var offlinePage = '/offline.html';
 var offlineFragment = '/offline.fragment.html';
@@ -7,7 +7,14 @@ var preCacheFiles = [
   offlinePage,
   offlineFragment,
   '/',
-  '/index.fragment.html'
+  '/index.fragment.html',
+  '/app.css',
+  '/app.js',
+  '/game-engine.mjs',
+  '/game-object.mjs',
+  '/gongga-game.js',
+  '/player.mjs',
+  '/utils.mjs',
 ];
 
 self.addEventListener('install', function(e) {
