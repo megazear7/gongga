@@ -1,4 +1,4 @@
-import Game from '../src/static/game.mjs';
+import GameEngine from '../src/static/game-engine.mjs';
 
 const stdin = process.stdin;
 stdin.setRawMode(true);
@@ -7,7 +7,7 @@ stdin.resume();
 
 class CLIGongga {
     constructor() {
-        this.engine = new Game({ screen: this });
+        this.engine = new GameEngine({ screen: this });
     }
 
     play() {
@@ -17,13 +17,27 @@ class CLIGongga {
             if (key === '\u0003') {
                 process.exit();
             } else {
-                this.engine.on(JSON.stringify(key));
+                const command = {
+                    '"w"': 'upPlayer1',
+                    '"a"': 'leftPlayer1',
+                    '"s"': 'downPlayer1',
+                    '"d"': 'rightPlayer1',
+                    '"\\u001b[A"': 'upPlayer2',
+                    '"\\u001b[D"': 'leftPlayer2',
+                    '"\\u001b[B"': 'downPlayer2',
+                    '"\\u001b[C"': 'rightPlayer2',
+                }[JSON.stringify(key)];
+                this.engine.on(command);
             }
         });
     }
 
     drawLine(line) {
         console.log(line || '');
+    }
+
+    clear() {
+        console.clear();
     }
 }
 

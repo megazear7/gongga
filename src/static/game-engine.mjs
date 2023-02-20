@@ -2,7 +2,7 @@ import { waitMs } from './utils.mjs';
 import GameObject from './game-object.mjs';
 import Player from './player.mjs';
 
-export default class Game {
+export default class GameEngine {
     width = 12;
     height = 9;
     speed = 100;
@@ -58,14 +58,14 @@ export default class Game {
 
     on(key) {
         const moveFunction = {
-            '"w"': () => this.player1.moveUp = true,
-            '"a"': () => this.player1.moveLeft = true,
-            '"s"': () => this.player1.moveDown = true,
-            '"d"': () => this.player1.moveRight = true,
-            '"\\u001b[A"': () => this.player2.moveUp = true,
-            '"\\u001b[D"': () => this.player2.moveLeft = true,
-            '"\\u001b[B"': () => this.player2.moveDown = true,
-            '"\\u001b[C"': () => this.player2.moveRight = true,
+            'upPlayer1': () => this.player1.moveUp = true,
+            'leftPlayer1': () => this.player1.moveLeft = true,
+            'downPlayer1': () => this.player1.moveDown = true,
+            'rightPlayer1': () => this.player1.moveRight = true,
+            'upPlayer2': () => this.player2.moveUp = true,
+            'leftPlayer2': () => this.player2.moveLeft = true,
+            'downPlayer2': () => this.player2.moveDown = true,
+            'rightPlayer2': () => this.player2.moveRight = true,
         }[key];
         
         typeof moveFunction === 'function' ? moveFunction() : undefined;
@@ -88,7 +88,7 @@ export default class Game {
     }
 
     draw() {
-        console.clear();
+        this.screen.clear();
         this.drawLine();
         this.drawBoard();
         this.drawLine();
