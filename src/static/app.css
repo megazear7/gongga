@@ -208,3 +208,11 @@ ul.breadcrumb li+li:before {
 .attribution > a:hover {
   color: var(--secondary-color);
 }
+
+.instructions {
+  color: rgba(255, 255, 255, 0.2);
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
