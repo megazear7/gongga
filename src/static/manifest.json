@@ -1,7 +1,7 @@
 {
-  "name": "OrisonJS",
-  "short_name": "OrisonJS",
-  "description": "Orison server and static stite generator documentation",
+  "name": "Gongga",
+  "short_name": "Gongga",
+  "description": "A pong like ASCII game",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#fa5d0f",

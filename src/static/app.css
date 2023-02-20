@@ -3,9 +3,12 @@
 }
 
 html {
-  --primary-color: #fa5d0f;
-  --secondary-color: #ffce27;
-  --tertiary-color: #d13405;
+  --primary-color: #55b5e0;
+  --primary-dark-color: #198eb7;
+  --secondary-color: #fce381;
+  --secondary-dark-color: #e29f33;
+  --tertiary-color: #f44e4d;
+  --tertiary-dark-color: #db3c3a;
   --code-header-color: #a8a8a8;
   --code-background-color: #f8f8f8;
   --grey: #eee;
@@ -17,7 +20,7 @@ html {
   --text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   font-size: 18px;
   line-height: 2rem;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -26,13 +29,16 @@ html {
 body {
   margin: 0;
   padding: 0;
+  text-align: center;
+  background-color: var(--dark-grey);
 }
 
 h1 {
-  font-size: 4rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 500;
-  color: var(--tertiary-color);
+  color: var(--primary-color);
   text-shadow: var(--text-shadow);
 }
 
@@ -72,11 +78,13 @@ h5 {
 }
 
 h6 {
-  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
   line-height: 1;
   font-weight: 300;
   letter-spacing: 2px;
-  color: var(--dark-grey);
+  color: var(--primary-dark-color);
+  font-style: italic;
   text-shadow: var(--text-shadow);
 }
 
@@ -169,4 +177,16 @@ ul.breadcrumb li {
 ul.breadcrumb li+li:before {
   padding: 8px;
   content: "/\00a0";
+}
+
+.game-icon-left {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.game-icon-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }

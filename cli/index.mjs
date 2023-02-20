@@ -1,5 +1,5 @@
-import { listen } from './io.js';
-import { waitMs } from './utils.js';
+import { listen } from './io.mjs';
+import { waitMs } from './utils.mjs';
 
 class GameObject {
     constructor(name, x, y, symbol, game) {
