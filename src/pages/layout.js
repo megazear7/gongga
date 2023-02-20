@@ -12,7 +12,7 @@ export default context => html`
     <meta name="description" content="${context.root.data.description}">
     <link rel="icon" href="/icons/favicon.ico">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="${context.root.data.primaryColor}">
+    <meta name="theme-color" content="#55b5e0">
     <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="${context.root.data.title}">
@@ -35,7 +35,7 @@ export default context => html`
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@username">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="gta">
+    <meta property="og:site_name" content="gongga">
     <meta property="og:image" content="/icons/icon-512x512.png" />
   </head>
   <body>
