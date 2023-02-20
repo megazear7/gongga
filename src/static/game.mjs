@@ -1,4 +1,3 @@
-import { listen } from './io.mjs';
 import { waitMs } from './utils.mjs';
 import GameObject from './game-object.mjs';
 import Player from './player.mjs';
@@ -8,7 +7,7 @@ export default class Game {
     height = 9;
     speed = 100;
 
-    constructor() {
+    constructor({ screen }) {
         this.midX = Math.floor(this.width / 2);
         this.midY =  Math.floor(this.height / 2);
         this.player1 = new Player('Player 1', 0, this.midY, '[A]', this);
@@ -21,7 +20,7 @@ export default class Game {
             this.player2,
             this.ball,
         ];
-        listen(this);
+        this.screen = screen;
     }
 
     player1Scored() {
@@ -93,7 +92,7 @@ export default class Game {
         this.drawLine();
         this.drawBoard();
         this.drawLine();
-        console.log();
+        this.screen.drawLine();
         this.drawScoreBoard();
     }
 
@@ -112,7 +111,7 @@ export default class Game {
                 }
             }
             line += this.isScoreForPlayer2(i) ? ' ' : '|';
-            console.log(line);
+            this.screen.drawLine(line);
         }
     }
 
@@ -129,7 +128,7 @@ export default class Game {
         for (var i = 0; i < this.width * 3 + 2; i++) {
             line += '-';
         }
-        console.log(line);
+        this.screen.drawLine(line);
     }
 
     drawScoreBoard() {
@@ -138,6 +137,6 @@ export default class Game {
             line += ' ';
         }
         line += ' ' + this.player2.points;
-        console.log(line);
+        this.screen.drawLine(line);
     }
 }
