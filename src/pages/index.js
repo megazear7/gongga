@@ -12,5 +12,6 @@ export default context => html`
     - <a href="https://github.com/megazear7/gongga">GitHub</a>
     - <a href="https://www.npmjs.com/package/gongga">NPM</a>
     - <a href="https://www.alexlockhart.me/">Alex Lockhart</a>
+    - <a href="https://www.buymeacoffee.com/alexlockhart">Support</a>
   </div>
 `;
