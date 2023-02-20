@@ -1,4 +1,4 @@
-import './gongga-game.js';
+import './gongga-game.mjs';
 
 if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
   navigator.serviceWorker.register('/sw.js')

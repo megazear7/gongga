@@ -193,9 +193,13 @@ ul.breadcrumb li+li:before {
 
 .attribution {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 0;
   width: 100vw;
   text-align: center;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.attribution > * {
   color: rgba(255, 255, 255, 0.2);
 }
